@@ -111,7 +111,9 @@
 
 
 
-## 기타
+## 취소 및 삭제
+
+
 
 ### 1. rm -rf
 
@@ -121,5 +123,14 @@
 - f => 강제로(force)
   - f는 생략해도 무방
 
+### 2. git add 취소
 
+- `git reset` 전체 파일 add 취소
+- `git reset HEAD` 특정 파일 add 취소
+
+### 3. git commit 취소
+
+- `git reset HEAD^` 가장 최신 커밋 1개 취소(삭제)
+- `git reset HEAD^^` 가장 최신 커밋 2개 취소(삭제)
+- 꺽쇠 갯수에 따라 최신 커밋을 필요한만큼 순서대로 삭제할 수 있음
 
