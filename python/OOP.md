@@ -184,3 +184,38 @@ Student 클래스에서 overriding을 하지 않고 사용하면 에러가 발�
 
 
 
+### 예외처리
+
+클래서에서의 강제 예외처리 - 사용자 정의 예외 클래스 활용
+
+```python
+# 사용자 정의 예외 클래스 작성
+class InsufficientError(Exception) :
+    def __init__(self,msg):
+        self.msg = msg
+        print(self.msg)
+```
+
+```python
+# 클래스에 정의된 함수에 예외처리 적용 및 강제 예외 발생
+class Account :
+    def __init__(self,account,balance,interestRate):
+        self.account = account
+        self.balance = balance
+        self.interestRate = interestRate
+
+    def accountInfo(self):
+        print(self.account,self.balance,self.interestRate)
+
+    def withDraw(self,amount):
+        try :
+            if self.balance < amount :
+                raise InsufficientError('잔액이 부족합니다!')
+
+                # raise Exception # 지정한 예외를 만들어서 발생시킴
+        except Exception as e:
+            print('error msg - ', e)
+        else :
+            self.balance -= amount
+```
+
