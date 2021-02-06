@@ -1,4 +1,4 @@
-### Terminal 부분
+### Terminal 부분(명령어)
 
 
 
@@ -43,8 +43,44 @@ ctrl + c
 ```django
 python manage.py makemigrations
 python manage.py migrate
-python manage.py createsuperuser
+```
+
+##### admin 계정 생성
+`python manage.py createsupereuser`
+
+
+
+### 주요 문법
+
+##### views
+
+- HttpResponse() - 거의안씀
+- JSONResponse() - json
+- render() - templates(xxx.html)
+- redirect()
+
+##### render vs redirect
+
+render -> ip : port/app/xxxx (html이 브라우저에 보여짐)
+{{}}를 통해 출력
+
+redirect(path X, alias O) : 요청을 재지정
+path가 아닌 path의 별칭(name)을 넣어준다
+
+url : xxxxxxx.com?key=value&key=value -> GET
+	           <------- queryString ------->										
+url: xxxxx.com -> POST
+
+##### 제이쿼리 설치
+
+```html
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 ```
 
 
 
+{{ }} -- print
+{% %} -- code (if, for, path)
+
+POST 방식에서는
+{% csrf_token %} 한 줄 넣어줘야함
