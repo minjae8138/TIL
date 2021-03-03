@@ -174,12 +174,12 @@ Array.prototype 관련 함수 활용
 1. `Array.prototype.find() ` : 첫번째 엘리먼트 값을 리턴하는 함수
 
    ```javascript
-   const emails = {
+   const emails = [
        "abc@naver.com",
        "abc@gmail.com",
        "abc@daum.net",
        "abc@hanmail.com"
-   }
+   ]
    
    const findMail = emails.find(itme => true);
    console.log(findMail)
@@ -193,12 +193,12 @@ Array.prototype 관련 함수 활용
 2. `Array.prototype.filter() `: 함수의 조건을 만족하는 모든 엘리먼트 리턴하는 함수
 
    ```javascript
-   const emails = {
+   const emails = [
        "abc@naver.com",
        "abc@gmail.com",
        "abc@daum.net",
        "abc@hanmail.com"
-   }
+   ]
    
    const noGmaill = emails.filter(item => !item.includes("@gmail"))
    console.log(noGmail);
@@ -209,12 +209,12 @@ Array.prototype 관련 함수 활용
 3. `Array.prototype.forEach()` :  각 array의 엘리먼트 마다 주어진 함수를 실행
 
    ```javascript
-   const emails = {
+   const emails = [
        "abc@naver.com",
        "abc@gmail.com",
        "abc@daum.net",
        "abc@hanmail.com"
-   }
+   ]
    
    emails.forEach(email => {
    	console.log(email.split("@")[0])
@@ -235,12 +235,12 @@ Array.prototype 관련 함수 활용
    ##### 값이 아닌 object 리턴하기
 
    ```javascript
-   const emails = {
+   const emails = [
        "abc@naver.com",
        "abc@gmail.com",
        "abc@daum.net",
        "abc@hanmail.com"
-   }
+   ]
    
    // implicit return 형식
    const cleand = emails.map((email,index) => ({username: email.split("@")[0],index}));
