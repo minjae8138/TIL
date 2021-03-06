@@ -1,6 +1,6 @@
 # STRINGS
 
-### 
+
 
 ### #3.0 template literal
 
@@ -216,7 +216,3 @@ console.log(name.startsWith("Mike"))
 
 // true
 ```
-
-
-
-`
