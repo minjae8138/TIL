@@ -4,7 +4,7 @@
 
 자바스크립트와 함게 그것을 만들고 html로 밀어넣는다
 
-즉, elemnet를 넣는 역할
+즉, element를 넣는 역할
 
 여기서 react가 널리 사용되는 이유
 
@@ -12,13 +12,13 @@
 
 
 
-소스코드에 처음부터 HTM L을 넣지 않고, HTML에서 HTML을 추가하거나 제거할 수 있음
+소스코드에 처음부터 HTML을 넣지 않고, HTML에서 HTML을 추가하거나 제거할 수 있음
 
 작성한 component(html,css,js 코드 조각) 를 빈 html에 밀어넣는다
 
 이게 가능한 이유는 virtual dom 때문
 
-**componen :  html을 반환하는 함수** -> function과 application으로 이루어짐
+**component :  html을 반환하는 함수** -> function과 application으로 이루어짐
 
 
 
