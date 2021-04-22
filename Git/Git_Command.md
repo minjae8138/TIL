@@ -32,6 +32,14 @@
 - `git add<추가하고싶은 파일>`
   - `git add .` : 현재 폴더의 모든 파일과 폴더를 add
 - working directory => staging area로 이동
+- `git add -p`  --> 매우 유용함
+  - 수정한 내용을 하나씩 확인하여 커밋여부를 결정할 수 있다
+  - 가끔 add를 해도 traking이 되지 않을 때 이 코드를 활용하면 해결할 수 있다
+  - 명령어 모음(기본적인 것은 아래 3가지만 알아도 된다)
+    - `y` : hunk를 스테이지 올린다
+    - `n` : hunk를 스테이지 올리지 않는다
+    - `q` : 종료
+  - 참고 - https://siyoon210.tistory.com/103
 
 ### 2. commit
 
@@ -125,8 +133,10 @@
 
 ### 2. git add 취소
 
-- `git reset` 전체 파일 add 취소
-- `git reset HEAD` 특정 파일 add 취소
+- `git rm --cached 파일명` : 특정 파일 add 취소
+
+- `git reset` : 전체 파일 add 취소
+- `git reset HEAD` :  최근 파일 add 취소
 
 ### 3. git commit 취소
 
